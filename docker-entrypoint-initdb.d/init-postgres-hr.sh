@@ -14,7 +14,7 @@ psql -U $POSTGRES_USER -f pgex/pgex_backup.pgsql -d pghr -x -q
 psql -U $POSTGRES_USER -d pghr -c "GRANT ALL PRIVILEGES ON DATABASE pghr TO $POSTGRES_USER;"
 psql -U $POSTGRES_USER -d pghr -c "ALTER SCHEMA public OWNER TO $POSTGRES_USER;"
 
-exec "$@"
+# exec "$@" - dangerous 
 #!/usr/bin/env bash
 
 #psql -U $POSTGRES_USER -f pgex/pgex_backup.pgsql -d postgres -x -q
