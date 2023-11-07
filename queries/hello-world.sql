@@ -1,1 +1,1 @@
-select * from regions;
+select 'Hello World!';
